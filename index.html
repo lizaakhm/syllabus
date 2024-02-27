@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>document</title>
+</head>
+
+<body class="bg-[#131313]">
+    <main>
+        <section class="flex px-[30px] mb-[50px]">
+            <div class="flex w-half" >
+                <div 
+                    class="min-w-[700px] bg-black py-[100px] mt-[70px] px-[50px] rounded-[30px] md:py-[100px] lg:py-[100px] sm:py-[100px]  ">
+                    <div>
+                        <p class="w-90 text-[22px] font-bold text-white text-center mb-28">სილაბუსი</p>
+                    </div>
+                    <div>
+                        <div>
+                            <div id="card"
+                                class="flex items-center justify-between text-[19px] lg:text-[24px] text-white font-[600] mb-[30px] mt-[28px] firagoBold uppercase cursor-pointer duration-500 ease-in-out ">
+                                ლექცია 1 (კვირა 1) <img id="arr-icon" 
+                                    src="https://reeducate.space/_next/static/media/caret-down.7f797aa2.svg" alt="">
+                                    
+                            </div>
+                            <div id="line" class="line border-b border-gray-400 mb-[70px]"></div>
+                            <ul id="content"
+                                class="pl-[20px] text-white text-[17px] lg:text-[22px] list-disc marker:text-[#91c6ea] hidden border-b border-gray-400 pb-8">
+                                <li>დიზაინ პლატფორმების მიმოხილვა</li>
+                                <li>photoshop-ის განხილვა</li>
+                                <li>tool-ების განხილვა/გატესტვა</li>
+                                <li>ფოტო/ფაილების შემოტანა/შენახვა</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div id="card"
+                                class="flex items-center justify-between text-[19px] lg:text-[24px] text-white font-[600] mb-[30px] mt-[28px] firagoBold uppercase cursor-pointer  duration-500 ease-in-out">
+                                ლექცია 2 (კვირა 2) <img id="arr-icon"
+                                    src="https://reeducate.space/_next/static/media/caret-down.7f797aa2.svg" alt="">
+                            </div>
+                            <div id="line" class="line border-b border-gray-400 mb-[70px]"></div>
+
+                            <ul id="content"
+                                class="pl-[20px] text-white text-[17px] lg:text-[22px] list-disc marker:text-[#91c6ea] hidden border-b border-gray-400 pb-8">
+                                <li>Pen tool-ის და Brush tool-ის შესაძლებლობები</li>
+                                <li>Mask-ის მნიშვნელობა</li>
+                                <li>ლეიერებზე მუშაობა</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div id="card"
+                                class="flex items-center justify-between text-[19px] lg:text-[24px] text-white font-[600] mb-[30px] mt-[28px] firagoBold uppercase cursor-pointer  duration-500 ease-in-out ">
+                                ლექცია 3 (კვირა 3) <img id="arr-icon"
+                                    src="https://reeducate.space/_next/static/media/caret-down.7f797aa2.svg" alt="">
+                            </div>
+                            <div id="line" class="line border-b border-gray-400 mb-[70px]"></div>
+
+                            <ul id="content"
+                                class="pl-[20px] text-white text-[17px] lg:text-[22px] list-disc marker:text-[#91c6ea] hidden border-b border-gray-400 pb-8 ">
+                                <li>Illustrator-ის განხილვა</li>
+                                <li>Artboard-ების მნიშვნელობა</li>
+                                <li>ხელსაწყოების განხილვა</li>
+                                <li>ფაილების გადატანა სხვა პროგრამებში/შენახვა</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div id="card"
+                                class="flex items-center justify-between text-[19px] lg:text-[24px] text-white font-[600] mb-[30px] mt-[28px] firagoBold uppercase cursor-pointer  duration-500 ease-in-out">
+                                ლექცია 4 (კვირა 4) <img id="arr-icon"
+                                    src="https://reeducate.space/_next/static/media/caret-down.7f797aa2.svg" alt="">
+                            </div>
+                            <div id="line" class="line border-b border-gray-400 mb-[70px]"></div>
+
+                            <ul id="content"
+                                class="pl-[20px] text-white text-[17px] lg:text-[22px] list-disc marker:text-[#91c6ea] hidden border-b border-gray-400 pb-8">
+                                <li>ტიპოგრაფიის განხილვა</li>
+                                <li>შრიფტების მნიშვნელობა დიზაინში</li>
+                                <li>ფონტის ვექტორად გარდაქმნა</li>
+                                <li>ფოტოს დაექსფენდება/დატრეისება</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const cardHeaders = document.querySelectorAll("#card");
+                const contentDivs = document.querySelectorAll("#content");
+                const arrowIcons = document.querySelectorAll("#arr-icon");
+                const bottomLine = document.querySelectorAll("#line")
+
+                cardHeaders.forEach((cardHeader, index) => {
+                    cardHeader.addEventListener("click", function () {
+                        contentDivs[index].classList.toggle("hidden");
+                        arrowIcons[index].classList.toggle('rotate-180');
+                        bottomLine[index].classList.toggle("hidden")
+
+                       
+                    });
+                });
+            });
+
+        </script>
+</body>
+
+</html>
